@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ILFtVn4rYq88ydVOpMiO",
+    "Onay": true,
+    "Yetki": true,
+    "Kart No": "34621",
+    "Daire No": "",
+    "Sifre": 1234
+  },
+  {
+    "id": "qglvoxBdU3fGl27storS",
+    "Onay": true,
+    "Yetki": false,
+    "Kart No": "34622",
+    "Daire No": "",
+    "DeleteItem": true
+  }
+]
