@@ -1,0 +1,106 @@
+{
+  "clients": [
+    {
+      "ID": 1,
+      "Name": "Ahmet Yılmaz",
+      "Username": "ahmetyilmaz",
+      "Password": "sifre123",
+      "CreatedDateTime": "2024-01-01T12:00:00",
+      "Address": "123 Sokak, İstanbul",
+      "City": "İstanbul",
+      "Country": "Türkiye",
+      "Email": "ahmet.yilmaz@example.com",
+      "Phone": "21",
+      "Enable": 1,
+      "Credit": 1
+    },
+    {
+      "ID": 2,
+      "Name": "Elif Kara",
+      "Username": "elifkara",
+      "Password": "sifre456",
+      "CreatedDateTime": "2024-01-02T12:00:00",
+      "Address": "456 Sokak, Ankara",
+      "City": "Ankara",
+      "Country": "Türkiye",
+      "Email": "elif.kara@example.com",
+      "Phone": "22",
+      "Enable": 1,
+      "Credit": 0
+    },
+    {
+      "ID": 3,
+      "Name": "A",
+      "Password": "Ja",
+      "CreatedDateTime": "2024-09-23T11:30:10.272Z",
+      "Address": "Aja",
+      "City": "Aha",
+      "Country": "A",
+      "Email": "A",
+      "Phone": "4",
+      "Enable": 1,
+      "Credit": 0
+    }
+  ],
+  "cards": [
+    {
+      "ID": 1,
+      "CardNo": "34621",
+      "Name": "Ahmet Yılmaz",
+      "Phone": "21",
+      "FlatNo": 101,
+      "Credit": 100,
+      "ClientID": 1
+    },
+    {
+      "ID": 2,
+      "CardNo": "34622",
+      "Name": "Elif Kara",
+      "Phone": "22",
+      "FlatNo": 102,
+      "Credit": 50,
+      "ClientID": 2
+    },
+    {
+      "ID": 3,
+      "CardNo": "8009",
+      "Name": "A",
+      "Phone": "4",
+      "FlatNo": "4",
+      "Credit": 0,
+      "ClientID": 1727091010272
+    }
+  ],
+  "devices": [
+    {
+      "ID": 1,
+      "DevId": "Device001",
+      "Enable": 1,
+      "ClientID": 1,
+      "DevBluetoothMac": "00:1A:7D:DA:71:11",
+      "CreatedDateTime": "2024-01-01T12:00:00"
+    },
+    {
+      "ID": 2,
+      "DevId": "Device002",
+      "Enable": 1,
+      "ClientID": 2,
+      "DevBluetoothMac": "00:1A:7D:DA:71:12",
+      "CreatedDateTime": "2024-01-02T12:00:00"
+    }
+  ],
+  "logs": [
+    {
+      "ID": 1,
+      "DevId": "Device001",
+      "CardId": "123456789012345",
+      "CreatedDateTime": "2024-01-01T12:01:00"
+    },
+    {
+      "ID": 2,
+      "DevId": "Device002",
+      "CardId": "987654321098765",
+      "CreatedDateTime": "2024-01-02T12:02:00"
+    }
+  ]
+}

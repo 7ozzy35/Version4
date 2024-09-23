@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "Version4",
+			"path": "."
+		},
+		{
+			"name": "Context",
+			"path": "../version3/Context"
+		},
+		{
+			"path": "../version3/assets"
+		}
+	],
+	"settings": {}
+}
