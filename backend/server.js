@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
@@ -10,6 +11,7 @@ const PORT = 3000;
 const dataFilePath = path.join(__dirname, 'data.json');
 
 // Middleware
+app.use(cors());
 app.use(bodyParser.json());
 
 // Kullanıcı kaydı için endpoint
@@ -41,8 +43,23 @@ app.post('/register', (req, res) => {
         return res.status(500).json({ message: 'Veri dosyasını kaydederken hata oluştu.' });
       }
 
+      // Yeni kullanıcıyı konsola yazdır
+      console.log('Yeni Kullanıcı Kaydedildi:', client);
+      console.log('Yeni Kart Bilgisi:', card);
+
       res.status(200).json({ message: 'Kayıt başarılı!' });
     });
+  });
+});
+
+// Kullanıcı verilerini görüntülemek için endpoint
+app.get('/register', (req, res) => {
+  fs.readFile(dataFilePath, 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).json({ message: 'Veri dosyasını okurken hata oluştu.' });
+    }
+
+    res.status(200).json(JSON.parse(data)); // JSON verisini döndür
   });
 });
 

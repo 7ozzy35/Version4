@@ -32,12 +32,25 @@
       "ID": 3,
       "Name": "A",
       "Password": "Ja",
-      "CreatedDateTime": "2024-09-23T11:30:10.272Z",
+      "CreatedDateTime": "2024-09-23T11:35:37.786Z",
       "Address": "Aja",
       "City": "Aha",
       "Country": "A",
       "Email": "A",
       "Phone": "4",
+      "Enable": 1,
+      "Credit": 0
+    },
+    {
+      "ID": 4,
+      "Name": "Ozan",
+      "Password": "21",
+      "CreatedDateTime": "2024-09-23T11:48:27.011Z",
+      "Address": "Tuncer",
+      "City": "Edirne",
+      "Country": "Türkiye",
+      "Email": "Ozan@gmail.com",
+      "Phone": "35",
       "Enable": 1,
       "Credit": 0
     }
@@ -63,12 +76,21 @@
     },
     {
       "ID": 3,
-      "CardNo": "8009",
+      "CardNo": "51972",
       "Name": "A",
       "Phone": "4",
       "FlatNo": "4",
       "Credit": 0,
-      "ClientID": 1727091010272
+      "ClientID": 1727091337786
+    },
+    {
+      "ID": 4,
+      "CardNo": "23512",
+      "Name": "Ozan",
+      "Phone": "35",
+      "FlatNo": "21",
+      "Credit": 0,
+      "ClientID": 1727092107011
     }
   ],
   "devices": [

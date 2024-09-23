@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Alert, TouchableOpacity } from 'react-native';
 
 export default function Register() {
   const [name, setName] = useState('');
@@ -71,15 +71,17 @@ export default function Register() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Kayıt Ol</Text>
-      <TextInput style={styles.input} placeholder="Ad Soyad" value={name} onChangeText={setName} />
-      <TextInput style={styles.input} placeholder="Şifre" value={password} onChangeText={setPassword} secureTextEntry />
-      <TextInput style={styles.input} placeholder="Daire No" value={flatNo} onChangeText={setFlatNo} keyboardType="numeric" />
-      <TextInput style={styles.input} placeholder="Telefon" value={phone} onChangeText={setPhone} keyboardType="phone-pad" />
-      <TextInput style={styles.input} placeholder="E-posta" value={email} onChangeText={setEmail} keyboardType="email-address" />
-      <TextInput style={styles.input} placeholder="Adres" value={address} onChangeText={setAddress} />
-      <TextInput style={styles.input} placeholder="Şehir" value={city} onChangeText={setCity} />
-      <TextInput style={styles.input} placeholder="Ülke" value={country} onChangeText={setCountry} />
-      <Button title="Kayıt Ol" onPress={handleRegister} />
+      <TextInput style={styles.input} placeholder="Ad Soyad" value={name} onChangeText={setName} placeholderTextColor="#333" />
+      <TextInput style={styles.input} placeholder="Şifre" value={password} onChangeText={setPassword} secureTextEntry placeholderTextColor="#333" />
+      <TextInput style={styles.input} placeholder="Daire No" value={flatNo} onChangeText={setFlatNo} keyboardType="numeric" placeholderTextColor="#333" />
+      <TextInput style={styles.input} placeholder="Telefon" value={phone} onChangeText={setPhone} keyboardType="phone-pad" placeholderTextColor="#333" />
+      <TextInput style={styles.input} placeholder="E-posta" value={email} onChangeText={setEmail} keyboardType="email-address" placeholderTextColor="#333" />
+      <TextInput style={styles.input} placeholder="Adres" value={address} onChangeText={setAddress} placeholderTextColor="#333" />
+      <TextInput style={styles.input} placeholder="Şehir" value={city} onChangeText={setCity} placeholderTextColor="#333" />
+      <TextInput style={styles.input} placeholder="Ülke" value={country} onChangeText={setCountry} placeholderTextColor="#333" />
+      <TouchableOpacity style={styles.button} onPress={handleRegister}>
+        <Text style={styles.buttonText}>Kayıt Ol</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -89,17 +91,31 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     padding: 20,
+    backgroundColor: '#F5F5F5', // Krem rengi arka plan
   },
   title: {
     fontSize: 24,
     marginBottom: 20,
     textAlign: 'center',
+    color: '#333', // Siyahın biraz açık tonu
   },
   input: {
     borderWidth: 1,
-    borderColor: '#007AFF',
+    borderColor: '#333', // Siyahın biraz açık tonu
     padding: 10,
     marginVertical: 10,
     borderRadius: 5,
+    color: '#333', // Siyahın biraz açık tonu
+  },
+  button: {
+    backgroundColor: '#007AFF',
+    padding: 15,
+    borderRadius: 5,
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
   },
 });
